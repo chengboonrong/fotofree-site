@@ -1,18 +1,205 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>:root{color-scheme:light dark;--bg:#fff;--fg:#1d1d1f;--muted:#6e6e73;--link:#0066cc}@media (prefers-color-scheme:dark){:root{--bg:#000;--fg:#f5f5f7;--muted:#a1a1a6;--link:#2997ff}}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif}main{max-width:680px;margin:0 auto;padding:48px 16px 64px}h1{font-size:34px;line-height:1.15;margin:0 0 6px}h2{font-size:21px;margin:36px 0 8px}p,li{margin:0 0 12px}.muted{color:var(--muted)}a{color:var(--link)}nav{margin-bottom:32px;font-size:15px}nav a{margin-right:16px}</style><title>FotoFree Support</title></head><body><main>
-<nav><a href="./">Support</a><a href="privacy.html">Privacy Policy</a></nav>
-<h1>FotoFree</h1>
-<p class="muted">Clear your photo library one batch at a time, on iPhone and iPad.</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FotoFree – Clear your photo library, one batch a day</title>
+<meta name="description" content="FotoFree is a photo cleaner for iPhone and iPad. Swipe through a small batch of random photos, delete what you don't need, and check every choice before anything goes. No account, nothing leaves your device.">
+<link rel="canonical" href="https://chengboonrong.github.io/fotofree-site/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chengboonrong.github.io/fotofree-site/">
+<meta property="og:title" content="FotoFree – Clear your photo library, one batch a day">
+<meta property="og:description" content="Swipe through a small batch of random photos. Up to delete, down to favorite. Private by design. Coming soon to the App Store.">
+<meta property="og:image" content="https://chengboonrong.github.io/fotofree-site/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="FotoFree">
+<meta property="og:image:alt" content="FotoFree app icon and an iPhone showing one photo full screen">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"FotoFree","operatingSystem":"iOS 26, iPadOS 26 or later","applicationCategory":"PhotographyApplication","description":"A photo cleaner for iPhone and iPad. Swipe through a small batch of random photos a day: drag up to delete, down to favorite. Everything happens on the device.","image":"https://chengboonrong.github.io/fotofree-site/img/icon.png"}
+</script>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f5f5f7;--fg:#1d1d1f;--muted:#6e6e73;--link:#0066cc;--line:#d2d2d7;--blue:#0a6cff;--red:#e5342a;--pink:#d6336c;--green:#248a3d}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--bg2:#161617;--fg:#f5f5f7;--muted:#a1a1a6;--link:#2997ff;--line:#38383a;--blue:#2997ff;--red:#ff6961;--pink:#ff6b9a;--green:#4cd964}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--link)}
+img,video{display:block;max-width:100%;height:auto}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:19px;color:var(--fg);text-decoration:none}
+.brand img{width:32px;height:32px;border-radius:8px}
+nav{display:flex;gap:18px;font-size:15px}
+nav a{text-decoration:none;white-space:nowrap}
+h1{font-size:clamp(34px,7vw,56px);line-height:1.07;letter-spacing:-.02em;margin:0 0 16px}
+h2{font-size:clamp(28px,5vw,40px);line-height:1.1;letter-spacing:-.015em;margin:0 0 14px}
+h3{font-size:19px;margin:0 0 4px}
+p{margin:0 0 14px}
+.lede{font-size:clamp(19px,2.4vw,22px);color:var(--muted);max-width:34em}
+.muted{color:var(--muted)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:32px 0 56px;border-top:0}
+.soon{display:inline-flex;align-items:center;gap:10px;background:var(--fg);color:var(--bg);border-radius:14px;padding:12px 20px;font-weight:600;font-size:17px;margin:8px 0 12px}
+.small{font-size:15px}
+.phone{position:relative;width:min(300px,78vw);margin:0 auto;border-radius:44px;overflow:hidden;border:10px solid #1d1d1f;background:#000;box-shadow:0 20px 60px rgba(0,0,0,.18)}
+.phone video,.phone img{width:100%;aspect-ratio:440/956;object-fit:cover}
+.phone .still{display:none}
+#toggle{position:absolute;right:12px;bottom:12px;font:600 13px/1 -apple-system,BlinkMacSystemFont,sans-serif;color:#fff;background:rgba(60,60,67,.75);border:0;border-radius:999px;padding:8px 12px;cursor:pointer}
+#toggle:focus-visible{outline:2px solid #2997ff;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.phone video{display:none}.phone .still{display:block}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.gestures{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gestures li{background:var(--bg2);border-radius:16px;padding:16px;margin:0}
+.gestures .arrow{font-size:28px;line-height:1;display:block;margin-bottom:8px}
+.gestures p{margin:0;font-size:15px;color:var(--muted)}
+.del{color:var(--red)}.fav{color:var(--pink)}.keep{color:var(--green)}.back{color:var(--blue)}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.shots img,.shot{border-radius:24px;border:1px solid var(--line)}
+.shot{width:min(300px,78vw);margin:0 auto}
+.checks{list-style:none;padding:0;margin:20px 0 0}
+.checks li{padding-left:30px;position:relative;margin:0 0 10px}
+.checks li::before{content:"";position:absolute;left:0;top:.35em;width:18px;height:18px;border-radius:50%;background:var(--green)}
+.checks li::after{content:"";position:absolute;left:6px;top:calc(.35em + 4px);width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.label{display:inline-block;border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:15px;margin-top:8px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0 32px}
+.facts div{background:var(--bg2);border-radius:16px;padding:18px}
+.facts strong{display:block;font-size:19px;margin-bottom:4px}
+.facts span{font-size:15px;color:var(--muted)}
+.ipad{width:100%;max-width:520px;margin:0 auto;border-radius:20px;border:1px solid var(--line)}
+#support{max-width:720px}
+#support h3{margin-top:28px}
+.faq p{margin:0 0 14px}
+.closing{text-align:center}
+.closing .soon{margin-top:4px}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--muted)}
+@media (max-width:760px){
+  .hero,.split{grid-template-columns:1fr;gap:32px}
+  .hero{padding-top:16px}
+  .facts{grid-template-columns:1fr}
+  section{padding:44px 0}
+  nav{gap:14px}
+}
+@media (max-width:440px){.nav-how{display:none}}
+@media (max-width:360px){.gestures{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="brand" href="./"><img src="img/icon-180.png" alt="" width="32" height="32">FotoFree</a>
+  <nav><a class="nav-how" href="#how">How it works</a><a href="#support">Support</a><a href="privacy.html">Privacy</a></nav>
+</header>
 
-<h2>Contact</h2>
-<p>Questions, problems or ideas: email <a href="mailto:chengchris8715@gmail.com?subject=FotoFree">chengchris8715@gmail.com</a>. Please include your device and iOS version.</p>
+<main>
+<div class="hero">
+  <div>
+    <h1>Clear your photo library, one small batch a day.</h1>
+    <p class="lede">Thousands of photos you'll never look at again, and sorting them feels like a chore. FotoFree deals you a few at random. Swipe through them quickly and keep only what matters.</p>
+    <div class="soon" role="note">Coming soon to the App Store</div>
+    <p class="muted small">Free, with an optional one-time purchase &middot; iPhone and iPad &middot; iOS 26 or later</p>
+  </div>
+  <div class="phone">
+    <video id="demo" muted loop playsinline preload="metadata" poster="img/demo.jpg" width="440" height="956" aria-label="FotoFree showing photos one at a time as they are swiped through"><source src="img/demo.mp4" type="video/mp4"></video>
+    <button id="toggle" type="button" hidden>Pause</button>
+    <img class="still" src="img/demo.jpg" alt="FotoFree showing a waterfall photo full screen, with Delete and Favorite buttons below" width="440" height="956">
+  </div>
+</div>
 
-<h2>How it works</h2>
-<p>FotoFree shows a batch of random photos from your library, one at a time. Swipe left and right to move between them, drag a photo up to mark it for deletion, or down to mark it a favorite. When you finish, you check your choices in a grid, and deletions go through Apple&rsquo;s own delete prompt. Nothing changes in Photos until then.</p>
+<section id="how">
+  <div class="split">
+    <div>
+      <h2>One swipe per photo.</h2>
+      <p class="lede">Each photo fills the screen. Decide and move on.</p>
+      <ul class="gestures">
+        <li><span class="arrow del" aria-hidden="true">&uarr;</span><h3>Drag up</h3><p>Mark it for deletion.</p></li>
+        <li><span class="arrow fav" aria-hidden="true">&darr;</span><h3>Drag down</h3><p>Make it a favorite.</p></li>
+        <li><span class="arrow keep" aria-hidden="true">&larr;</span><h3>Swipe left</h3><p>Keep it and see the next photo.</p></li>
+        <li><span class="arrow back" aria-hidden="true">&rarr;</span><h3>Swipe right</h3><p>Go back to the last one.</p></li>
+      </ul>
+    </div>
+    <div class="shots">
+      <img src="img/shot-delete.jpg" alt="A photo dragged up and marked for deletion" width="506" height="1100" loading="lazy">
+      <img src="img/shot-favorite.jpg" alt="A photo dragged down and marked as a favorite" width="506" height="1100" loading="lazy">
+    </div>
+  </div>
+</section>
 
-<h2>Common questions</h2>
-<p><strong>Where do deleted photos go?</strong> To Recently Deleted in the Photos app, where they stay for 30 days and can be recovered.</p>
-<p><strong>How many batches can I do?</strong> One batch a day is free; the allowance resets at midnight in your time zone. A one-time purchase, Unlimited Batches, removes the limit for good.</p>
-<p><strong>I bought Unlimited Batches on another device.</strong> Tap <em>Restore Purchases</em> on the paywall or the resting screen, signed in with the same Apple Account.</p>
-<p><strong>Can I clear one album, like Screenshots?</strong> Yes. Tap the counter at the top of a batch, pick the albums, and tap Deal.</p>
-<p><strong>Some photos don&rsquo;t load.</strong> FotoFree doesn&rsquo;t download photos stored only in iCloud, so those may not show. Photos kept on the device always do.</p>
-</main></body></html>
+<section>
+  <div class="split">
+    <img class="shot" src="img/shot-check.jpg" alt="The check screen: a grid of the batch with five photos marked for deletion and a Delete 5 Photos button" width="506" height="1100" loading="lazy">
+    <div>
+      <h2>Nothing goes until you check.</h2>
+      <p class="lede">At the end of a batch you see every choice in one grid. Tap a photo to change your mind.</p>
+      <ul class="checks">
+        <li>Deleting always goes through Apple's own confirmation prompt.</li>
+        <li>Deleted photos wait in Recently Deleted for 30 days, so you can still get them back.</li>
+        <li>Want to clear one pile, like Screenshots? Pick the albums and deal a batch from just those.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="private">
+  <h2>Your photos stay on your device.</h2>
+  <p class="lede">FotoFree does all its work on your device. There's nothing to sign up for and nothing to send.</p>
+  <ul class="checks">
+    <li>No account or sign-in.</li>
+    <li>No servers. The app makes no network requests of its own.</li>
+    <li>No ads, analytics or tracking.</li>
+    <li>No third-party code.</li>
+  </ul>
+  <p class="label">App Store privacy label: <strong>Data Not Collected</strong></p>
+  <p class="small"><a href="privacy.html">Read the privacy policy</a></p>
+</section>
+
+<section>
+  <h2>Free to use, every day.</h2>
+  <div class="facts">
+    <div><strong>One batch a day, free</strong><span>A new batch every day, resetting at midnight where you are.</span></div>
+    <div><strong>Unlimited Batches</strong><span>One-time purchase, no subscription. RM4.90 in Malaysia, local price elsewhere.</span></div>
+    <div><strong>iPhone and iPad</strong><span>iOS 26 or later. Available everywhere except mainland China.</span></div>
+  </div>
+  <img class="ipad" src="img/shot-ipad.jpg" alt="FotoFree on iPad, showing one lake photo full screen" width="750" height="1000" loading="lazy">
+</section>
+
+<section id="support">
+  <h2>Support</h2>
+  <p>Questions, problems or ideas: email <a href="mailto:chengchris8715@gmail.com?subject=FotoFree">chengchris8715@gmail.com</a>. Please include your device and iOS version.</p>
+
+  <h3>How it works</h3>
+  <p>FotoFree shows a batch of random photos from your library, one at a time. Swipe left and right to move between them, drag a photo up to mark it for deletion, or down to mark it a favorite. When you finish, you check your choices in a grid, and deletions go through Apple&rsquo;s own delete prompt. Nothing changes in Photos until then.</p>
+
+  <h3>Common questions</h3>
+  <div class="faq">
+  <p><strong>Where do deleted photos go?</strong> To Recently Deleted in the Photos app, where they stay for 30 days and can be recovered.</p>
+  <p><strong>How many batches can I do?</strong> One batch a day is free; the allowance resets at midnight in your time zone. A one-time purchase, Unlimited Batches, removes the limit for good.</p>
+  <p><strong>I bought Unlimited Batches on another device.</strong> Tap <em>Restore Purchases</em> on the paywall or the resting screen, signed in with the same Apple Account.</p>
+  <p><strong>Can I clear one album, like Screenshots?</strong> Yes. Tap the counter at the top of a batch, pick the albums, and tap Deal.</p>
+  <p><strong>Some photos don&rsquo;t load.</strong> FotoFree doesn&rsquo;t download photos stored only in iCloud, so those may not show. Photos kept on the device always do.</p>
+  </div>
+</section>
+
+<section class="closing">
+  <h2>A cleaner library, a few photos at a time.</h2>
+  <div class="soon" role="note">Coming soon to the App Store</div>
+</section>
+</main>
+
+<script>
+(function(){var v=document.getElementById('demo'),b=document.getElementById('toggle');
+if(!matchMedia('(prefers-reduced-motion: no-preference)').matches)return;
+b.hidden=false;v.play().catch(function(){b.textContent='Play'});
+b.onclick=function(){if(v.paused){v.play();b.textContent='Pause'}else{v.pause();b.textContent='Play'}};})();
+</script>
+<footer><span>FotoFree</span><a href="#support">Support</a><a href="privacy.html">Privacy Policy</a></footer>
+</div>
+</body>
+</html>
